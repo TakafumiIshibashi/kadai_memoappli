@@ -11,6 +11,8 @@
 
 <body>
 
+    <h1>2021.5</h1>
+
     <table class="may_2021">
     
     
@@ -115,8 +117,58 @@
 
                     //1.Save クリックイベント
                     $("#save").on("click", function () {
+
                         const data = {
-                            text: $("#text_area1").val(),
+                            text1: $("#text_area1").val(),
+                            text2: $("#text_area2").val(),
+                            text3: $("#text_area3").val(),
+                            text4: $("#text_area4").val(),
+                            text5: $("#text_area5").val(),
+                            text6: $("#text_area6").val(),
+                            text7: $("#text_area7").val(),
+                            text8: $("#text_area8").val(),
+                            text9: $("#text_area9").val(),
+                            text10: $("#text_area10").val(),
+                            text11: $("#text_area11").val(),
+                            text12: $("#text_area12").val(),
+                            text13: $("#text_area13").val(),
+                            text14: $("#text_area14").val(),
+                            text15: $("#text_area15").val(),
+                            text16: $("#text_area16").val(),
+                            text17: $("#text_area17").val(),
+                            text18: $("#text_area18").val(),
+                            text19: $("#text_area19").val(),
+                            text20: $("#text_area20").val(),
+                            text21: $("#text_area21").val(),
+                            text22: $("#text_area22").val(),
+                            text23: $("#text_area23").val(),
+                            text24: $("#text_area24").val(),
+                            text25: $("#text_area25").val(),
+                            text26: $("#text_area26").val(),
+                            text27: $("#text_area27").val(),
+                            text28: $("#text_area28").val(),
+                            text29: $("#text_area29").val(),
+                            text30: $("#text_area30").val(),
+                            text31: $("#text_area31").val(),
+                            text32: $("#text_area32").val(),
+                            text33: $("#text_area33").val(),
+                            text34: $("#text_area34").val(),
+                            text35: $("#text_area35").val(),
+                            text36: $("#text_area36").val(),
+                            text37: $("#text_area37").val(),
+                            text38: $("#text_area38").val(),
+                            text39: $("#text_area39").val(),
+                            text40: $("#text_area40").val(),
+                            text41: $("#text_area41").val(),
+                            text42: $("#text_area42").val(),
+                            
+
+
+
+
+
+
+
                         };
                         // console.log(date);
                         const JsonData = JSON.stringify(data);
@@ -131,6 +183,47 @@
                     $("#clear").on("click", function () {
                         localStorage.removeItem("memo");
                         $("#text_area1").val("");
+                        $("#text_area2").val("");
+                        $("#text_area3").val("");
+                        $("#text_area4").val("");
+                        $("#text_area5").val("");
+                        $("#text_area6").val("");
+                        $("#text_area7").val("");
+                        $("#text_area8").val("");
+                        $("#text_area9").val("");
+                        $("#text_area10").val("");
+                        $("#text_area11").val("");
+                        $("#text_area12").val("");
+                        $("#text_area13").val("");
+                        $("#text_area14").val("");
+                        $("#text_area15").val("");
+                        $("#text_area16").val("");
+                        $("#text_area17").val("");
+                        $("#text_area18").val("");
+                        $("#text_area19").val("");
+                        $("#text_area20").val("");
+                        $("#text_area21").val("");
+                        $("#text_area22").val("");
+                        $("#text_area23").val("");
+                        $("#text_area24").val("");
+                        $("#text_area25").val("");
+                        $("#text_area26").val("");
+                        $("#text_area27").val("");
+                        $("#text_area28").val("");
+                        $("#text_area29").val("");
+                        $("#text_area30").val("");
+                        $("#text_area31").val("");
+                        $("#text_area32").val("");
+                        $("#text_area33").val("");
+                        $("#text_area34").val("");
+                        $("#text_area35").val("");
+                        $("#text_area36").val("");
+                        $("#text_area37").val("");
+                        $("#text_area38").val("");
+                        $("#text_area39").val("");
+                        $("#text_area40").val("");
+                        $("#text_area41").val("");
+                        $("#text_area42").val("");
                     });
 
 
@@ -142,7 +235,48 @@
                         console.log(JsonData);
                         const data = JSON.parse(JsonData);
                         console.log(data);
-                        $("#text_area1").val(data.text);
+                        $("#text_area1").val(data.text1);
+                        $("#text_area2").val(data.text2);
+                        $("#text_area3").val(data.text3);
+                        $("#text_area4").val(data.text4);
+                        $("#text_area5").val(data.text5);
+                        $("#text_area6").val(data.text6);
+                        $("#text_area7").val(data.text7);
+                        $("#text_area8").val(data.text8);
+                        $("#text_area9").val(data.text9);
+                        $("#text_area10").val(data.text10);
+                        $("#text_area11").val(data.text11);
+                        $("#text_area12").val(data.text12);
+                        $("#text_area13").val(data.text13);
+                        $("#text_area14").val(data.text14);
+                        $("#text_area15").val(data.text15);
+                        $("#text_area16").val(data.text16);
+                        $("#text_area17").val(data.text17);
+                        $("#text_area18").val(data.text18);
+                        $("#text_area19").val(data.text19);
+                        $("#text_area20").val(data.text20);
+                        $("#text_area21").val(data.text21);
+                        $("#text_area22").val(data.text22);
+                        $("#text_area23").val(data.text23);
+                        $("#text_area24").val(data.text24);
+                        $("#text_area25").val(data.text25);
+                        $("#text_area26").val(data.text26);
+                        $("#text_area27").val(data.text27);
+                        $("#text_area28").val(data.text28);
+                        $("#text_area29").val(data.text29);
+                        $("#text_area30").val(data.text30);
+                        $("#text_area31").val(data.text31);
+                        $("#text_area32").val(data.text32);
+                        $("#text_area33").val(data.text33);
+                        $("#text_area34").val(data.text34);
+                        $("#text_area35").val(data.text35);
+                        $("#text_area36").val(data.text36);
+                        $("#text_area37").val(data.text37);
+                        $("#text_area38").val(data.text38);
+                        $("#text_area39").val(data.text39);
+                        $("#text_area40").val(data.text40);
+                        $("#text_area41").val(data.text41);
+                        $("#text_area42").val(data.text42);
                     }
                         // else {
                         //     alert("データがないです");
