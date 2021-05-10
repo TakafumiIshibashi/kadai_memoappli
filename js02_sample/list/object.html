@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>オブジェクトの練習</title>
+</head>
+
+<body>
+  <h1>オブジェクトの練習</h1>
+  <button id="btn">表示</button>
+  <div id="echo"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      // データの作成
+      const classes = [
+        { date: '2020/04/25', youbi: 'Sat', event: '第0回授業' },
+        { date: '2020/05/09', youbi: 'Sat', event: '第1回授業' },
+        { date: '2020/05/16', youbi: 'Sat', event: '第2回授業' },
+        { date: '2020/05/23', youbi: 'Sat', event: '第3回授業' },
+      ];
+
+      // 内容を表示してみよう
+      // - 「第2回授業」をalert()かconsole.log()で表示！
+
+      console.log(classes[2].event);
+      // - 「2020/05/09」をalert()かconsole.log()で表示！
+      // alert(classes[1].date)
+      // - 「第3回授業は2020/05/23です」をalert()かconsole.log()で表示！
+      console.log(classes[3].event)
+      console.log(classes.length)
+      
+
+
+
+      // できる人は上記の内容をボタンクリック時にブラウザ上に表示しよう
+
+      let ptag =  "";
+      for(let i = 0; i < classes.lenght; i++) {
+      console.log(classes[i]);
+      ptag += "<p>" + classes[i] + "</p>";   
+      }
+      console.log(ptag );
+
+      for(let x of classes) {
+        console.log(x);
+      }
+
+      classes.forEach(function(x) {   
+      console.log(x);
+      })
+
+
+      // $("#btn").on("click", function () {
+      //   const  = {
+      //     title: $("#input").val(),
+      //     text: $("#text_area").val(),
+        // };
+
+    });
+  </script>
+</body>
+
+</html>

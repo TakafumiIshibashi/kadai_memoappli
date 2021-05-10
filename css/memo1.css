@@ -1,0 +1,187 @@
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+  /* ↓追記 */
+	/* width: 960px;
+  margin-left: 400px; */
+  background-color: rgb(255, 242, 225);
+
+}
+
+.cp_pricetable1{
+   /* 横並び */
+  display: flex;
+    /* 上下中央揃え*/
+ justify-content: center;
+    /* 上下中央 */
+ align-items: center;
+}
+
+
+.cp_pricetable1 {
+	text-align: center;
+	color: #444444;
+}
+.cp_pricetable1 .block {
+	position: relative;
+	float: left;
+	width: 33%;
+	height: 100%;
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: translate(0px, 0px);
+	transform: translate(0px, 0px);
+}
+.cp_pricetable1 .block ul, li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/**** blockのhover ****/
+.cp_pricetable1 .block:hover {
+	position: relative;
+	z-index: 100;
+	transition-delay: 0s;
+	-webkit-transform: translate(-2px,-2px);
+	transform: translate(-2px,-2px);
+	box-shadow: 0px 0 5px rgba(0,0,0,0.5);
+}
+.cp_pricetable1 .block:hover .header1,
+.cp_pricetable1 .block:hover .header2,
+.cp_pricetable1 .block:hover .style1,
+.cp_pricetable1 .block:hover .style2,
+.cp_pricetable1 .block:hover .footer1,
+.cp_pricetable1 .block:hover .footer2 {
+	padding: 0.5em;
+}
+/* --- メニュー名ブロック ---  */
+.cp_pricetable1 .block .header1 {
+	/* width: 100%; */
+	padding: 0.5em;
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background: #131874;
+}
+/* --- 価格ブロック ---  */
+.cp_pricetable1 .block .header2 {
+	/* width: 100%; */
+	padding: 0.5em;
+	border-top: 1px solid #131874;
+	background: #e483ab;
+}
+.cp_pricetable1 .block .header3 {
+	/* width: 100%; */
+	padding: 0.5em;
+	border-top: 1px solid #131874;
+	background: #d8eb6e;
+}
+/* --- 詳細 ---  */
+.cp_pricetable1 .block .style1,
+.cp_pricetable1 .block .footer1,
+.cp_pricetable1 .block .footer2 {
+	width: 30px;
+	padding: 0.5em;
+}
+.cp_pricetable1 .block .footer1,
+.cp_pricetable1 .block .footer2 {
+	padding: 0.5em;
+}
+.cp_pricetable1 .block .style1,
+.cp_pricetable1 .block .footer1 {
+	background-color: #e8effc;
+}
+
+.cp_pricetable1 .block .style1{
+	border-bottom: 1px dotted #ffffff;
+}
+/*ボタンデザイン*/
+.footer1 {
+	position: relative;
+	z-index: 1;
+	display: block;
+	overflow: hidden;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0.3em 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	border: 1px solid #da3c41;
+	border-radius: 4px;
+	background: #5fafd7;
+}
+.cp_pricetable1 .cp_btn::after {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 0;
+	content: '';
+	transition: 0.3s;
+	-webkit-transform: translate(-50%,-50%) rotate(45deg);
+	transform: translate(-50%,-50%) rotate(45deg);
+	opacity: 0;
+	background: #ffffff;
+}
+.cp_pricetable1 .cp_btn:hover {
+	color: #da3c41;
+}
+.cp_pricetable1 .cp_btn:hover::after {
+	height: 250%;
+	opacity: 1;
+}
+.cp_pricetable1 .cp_btn:active::after {
+	height: 350%;
+	opacity: 1;
+}
+
+
+
+/*ボタンデザイン*/
+.footer2 {
+    margin-top: 20px;
+	position: relative;
+	z-index: 1;
+	display: block;
+	overflow: hidden;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0.3em 1em;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	border: 1px solid #da3c41;
+	border-radius: 4px;
+	background: #cb5359;
+}
+.cp_pricetable1 .cp_btn::after {
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 0;
+	content: '';
+	transition: 0.3s;
+	-webkit-transform: translate(-50%,-50%) rotate(45deg);
+	transform: translate(-50%,-50%) rotate(45deg);
+	opacity: 0;
+	background: #ffffff;
+}
+.cp_pricetable1 .cp_btn:hover {
+	color: #da3c41;
+}
+.cp_pricetable1 .cp_btn:hover::after {
+	height: 250%;
+	opacity: 1;
+}
+.cp_pricetable1 .cp_btn:active::after {
+	height: 350%;
+	opacity: 1;
+}
+
+
+

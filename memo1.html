@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>見出しテキスト</title>
+    <link rel="stylesheet" href="css/memo1.css">
+</head>
+
+<body>
+
+    <table class="may_2021">
+    
+    
+    
+        <div class="cp_pricetable1">
+            <div class="block">
+                <ul>
+                    <li class="header2">Sunday</li>
+                    <li class="style1"><textarea id="text_area1"></textarea></li>
+                    <li class="style1"><textarea id="text_area2"></textarea></li>
+                    <li class="style1"><textarea id="text_area3"></textarea></li>
+                    <li class="style1"><textarea id="text_area4"></textarea></li>
+                    <li class="style1"><textarea id="text_area5"></textarea></li>
+                    <li class="style1"><textarea id="text_area6"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header1">Monday</li>
+                    <li class="style1"><textarea id="text_area7"></textarea></li>
+                    <li class="style1"><textarea id="text_area8"></textarea></li>
+                    <li class="style1"><textarea id="text_area9"></textarea></li>
+                    <li class="style1"><textarea id="text_area10"></textarea></li>
+                    <li class="style1"><textarea id="text_area11"></textarea></li>
+                    <li class="style1"><textarea id="text_area12"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header1">Tuesday</li>
+                    <li class="style1"><textarea id="text_area13"></textarea></li>
+                    <li class="style1"><textarea id="text_area14"></textarea></li>
+                    <li class="style1"><textarea id="text_area15"></textarea></li>
+                    <li class="style1"><textarea id="text_area16"></textarea></li>
+                    <li class="style1"><textarea id="text_area17"></textarea></li>
+                    <li class="style1"><textarea id="text_area18"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header1">Wednesday</li>
+                    <li class="style1"><textarea id="text_area19"></textarea></li>
+                    <li class="style1"><textarea id="text_area20"></textarea></li>
+                    <li class="style1"><textarea id="text_area21"></textarea></li>
+                    <li class="style1"><textarea id="text_area22"></textarea></li>
+                    <li class="style1"><textarea id="text_area23"></textarea></li>
+                    <li class="style1"><textarea id="text_area24"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header1">Thursday</li>
+                    <li class="style1"><textarea id="text_area25"></textarea></li>
+                    <li class="style1"><textarea id="text_area26"></textarea></li>
+                    <li class="style1"><textarea id="text_area27"></textarea></li>
+                    <li class="style1"><textarea id="text_area28"></textarea></li>
+                    <li class="style1"><textarea id="text_area29"></textarea></li>
+                    <li class="style1"><textarea id="text_area30"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header1">Friday</li>
+                    <li class="style1"><textarea id="text_area31"></textarea></li>
+                    <li class="style1"><textarea id="text_area32"></textarea></li>
+                    <li class="style1"><textarea id="text_area33"></textarea></li>
+                    <li class="style1"><textarea id="text_area34"></textarea></li>
+                    <li class="style1"><textarea id="text_area35"></textarea></li>
+                    <li class="style1"><textarea id="text_area36"></textarea></li>
+                </ul>
+            </div>
+            <div class="block">
+                <ul>
+                    <li class="header3">Saturday</li>
+                    <li class="style1"><textarea id="text_area37"></textarea></li>
+                    <li class="style1"><textarea id="text_area38"></textarea></li>
+                    <li class="style1"><textarea id="text_area39"></textarea></li>
+                    <li class="style1"><textarea id="text_area40"></textarea></li>
+                    <li class="style1"><textarea id="text_area41"></textarea></li>
+                    <li class="style1"><textarea id="text_area42"></textarea></li>
+                </ul>
+            </div>
+
+
+     </div>
+
+
+<div class="block">
+    <ul>
+        <li id="save" class="footer1"><a href="#" class="cp_btn">記録</a></li>
+        <li id="clear" class="footer2"><a href="#" class="cp_btn">削除</a></li>
+    </ul>
+</div>
+
+
+
+
+                
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script>
+
+                    //1.Save クリックイベント
+                    $("#save").on("click", function () {
+                        const data = {
+                            text: $("#text_area1").val(),
+                        };
+                        // console.log(date);
+                        const JsonData = JSON.stringify(data);
+                        // console.log(JsonData);
+                        localStorage.setItem("memo", JsonData);
+                    });
+
+
+
+
+                    //2.clear クリックイベント
+                    $("#clear").on("click", function () {
+                        localStorage.removeItem("memo");
+                        $("#text_area1").val("");
+                    });
+
+
+
+
+                    //3.ページ読み込み：保存データ取得表示
+                    if (localStorage.getItem("memo")) {
+                        const JsonData = localStorage.getItem("memo");
+                        console.log(JsonData);
+                        const data = JSON.parse(JsonData);
+                        console.log(data);
+                        $("#text_area1").val(data.text);
+                    }
+                        // else {
+                        //     alert("データがないです");
+                        // }
+
+
+
+                </script>
+
+
+
+
+    </table>

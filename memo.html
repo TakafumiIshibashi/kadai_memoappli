@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>見出しテキスト</title>
+    <link rel="stylesheet" href="css/memo.css">
+</head>
+
+<body>
+<table>
+
+
+
+<div class="cp_pricetable1">
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+            <li class="style1"><textarea id="text_area"></textarea></li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="footer2"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="footer2"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="footer2"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="footer2"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="style2">テキスト</li>
+            <li class="footer2"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+
+    <div class="block">
+        <ul>
+            <li class="header1">メニュー</li>
+            <li class="header2">¥0,000</li>
+            <li class="style1">テキスト</li>
+            <li class="style1">テキスト</li>
+            <li class="style1">テキスト</li>
+            <li class="style1">テキスト</li>
+            <li class="style1">テキスト</li>
+            <li class="footer1"><a href="#" class="cp_btn">ボタン</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+</table>
+
+
+
+    <main>
+        <input type="text" id="input">
+        <textarea id="text_area"></textarea>
+        <ul>
+            <li id="save">Save</li>
+            <li id="clear">Clear</li>
+        </ul>
+    </main>
+
+    <footer>
+        <small>G's</small>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        //1.Save クリックイベント
+        $("#save").on("click", function () {
+            const data = {
+                title: $("#input").val(),
+                text: $("#text_area").val(),
+            };
+            // console.log(date);
+            const JsonData = JSON.stringify(data);
+            // console.log(JsonData);
+            localStorage.setItem("memo", JsonData);
+        });
+
+
+
+
+        //2.clear クリックイベント
+        $("#clear").on("click", function () {
+            localStorage.removeItem("memo");
+            $("#input").val("");
+            $("#text_area").val("");
+        });
+
+
+
+
+        //3.ページ読み込み：保存データ取得表示
+        if (localStorage.getItem("memo")) {
+            const JsonData = localStorage.getItem("memo");
+            console.log(JsonData);
+            const data = JSON.parse(JsonData);
+            console.log(data);
+            $("#input").val(data.title);
+            $("#text_area").val(data.text);
+        }
+        // else {
+        //     alert("データがないです");
+        // }
+
+
+
+    </script>
+
+</body>
+
+</html>
